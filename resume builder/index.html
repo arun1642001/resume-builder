@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Form for User Input -->
+    <div class="form-container">
+        <h1>Resume Builder</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" accept="image/*">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" placeholder="Enter your phone number" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" placeholder="Enter your address"></textarea>
+
+        <label for="education">Education:</label>
+        <textarea id="education" placeholder="Enter your education details"></textarea>
+
+        <label for="languages">Languages:</label>
+        <textarea id="languages" placeholder="Enter the languages you know"></textarea>
+
+        <label for="objective">Objective:</label>
+        <textarea id="objective" placeholder="Enter your career objective"></textarea>
+
+        <label for="projects">Projects:</label>
+        <textarea id="projects" placeholder="Enter your project details"></textarea>
+
+        <label for="experience">Experience:</label>
+        <textarea id="experience" placeholder="Enter your experience details"></textarea>
+
+        <label for="certifications">Certifications:</label>
+        <textarea id="certifications" placeholder="Enter your certifications"></textarea>
+
+        <label for="skills">Skills:</label>
+        <textarea id="skills" placeholder="Enter your skills"></textarea>
+
+        <button onclick="generateResume()">Generate Resume</button>
+    </div>
+
+    <!-- Generated Resume -->
+    <div class="resume-container" id="resumeContainer">
+        <div class="left-section">
+            <img id="profilePic" alt="Profile Photo">
+            <h2 id="resName"></h2>
+
+            <div class="section-title">Contact Info</div>
+            <p id="resPhone"></p>
+            <p id="resEmail"></p>
+            <p id="resDob"></p>
+            <p id="resAddress"></p>
+
+            <div class="section-title">Education</div>
+            <p id="resEducation"></p>
+
+            <div class="section-title">Languages</div>
+            <p id="resLanguages"></p>
+        </div>
+        <div class="right-section">
+            <div class="section-title">Objective</div>
+            <p id="resObjective"></p>
+
+            <div class="section-title">Projects</div>
+            <p id="resProjects"></p>
+
+            <div class="section-title">Experience</div>
+            <p id="resExperience"></p>
+
+            <div class="section-title">Certifications</div>
+            <p id="resCertifications"></p>
+
+            <div class="section-title">Skills</div>
+            <p id="resSkills"></p>
+        </div>
+    </div>
+
+    <button id="printButton" onclick="printResume()">Print Resume</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
